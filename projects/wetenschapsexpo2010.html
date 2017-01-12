@@ -1,20 +1,45 @@
 <div class="single-portfolio">
   <div class="container">
     <div class="row">
-      <div class="col-md-8" id="primary">
-       <img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" />
+      <div class="col-md-4" id="primary">
+      <table>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+      </table>
      </div>
-     <div class="col-md-4" id="secondary">
+     <div class="col-md-8" id="secondary">
       <div class="project-desc">
-        <h3>Project Details</h3>
+        <h3>WetenschapsExpo Sciences 2010</h3>
         <div class="line-strong"></div>
         <ul class="list-details">
-          <li><i class="fa fa-calendar"></i> 9 Januari 2017</li>
-          <li><i class="fa fa-tag"></i> coding, contest, other</li>
-          <li><i class="fa fa-globe"></i><a href="#">Live Demo</a></li>
+          <li><i class="fa fa-calendar"></i> 23-24 April 2010</li>
+          <li><i class="fa fa-tag"></i>contest</li>
+          <li><i class="fa fa-users"></i>Gert-Jan Andries, Carl Hermans, Jeroen Theys and Robin Boeckxstaens</li>
         </ul>
           <p>
-              Lorem ipsum dolor sit amet consectetuer malesuada congue et suscipit condimentum. Nulla at malesuada mauris ornare neque tellus ac Aenean adipiscing felis. Vestibulum turpis Nam pede eget elit feugiat Vestibulum neque Curabitur justo. Donec cursus semper urna consectetuer Nam Vivamus ut Pellentesque mauris laoreet. Vitae magna in at Nulla sodales vitae wisi tincidunt libero laoreet.
+              WetenschapsExpo Sciences is a science contest for students between 6 and 20 years old. During a 2 day expo all teams present their scientific or technical project to the public. WetenschapsExpo Sciences offers young students the opportunity to show their results to the general public, experts in the matter and to their peers.In this way they do not only develop their scientific and technical knowledge, but also their presentation and communication skills.
+          </p>
+          <p>
+              In this project we've created a computer cluster from scratch. With old computers that were given by our school and some companies, we've created a cluster that was able to run parallel programed c++ programs (using MPICH)
+          </p>
+          <p>
+              What is a Beowulf Cluster?</br>
+              A Beowulf Cluster is a specific type of computer cluster, where a set of computers is connected in a network (LAN) and set up to act as one pc. In this network, there’s one computer defined as the Main Node, the computer where the user actually gives his commands to the cluster. Next, there’s a Service Node, a computer which runs all the services necessary for the cluster, e.g. shared storage of files and handing out the right IP-address to each computer in the network. It’s also used as a firewall to protect the cluster against malware on the internet. A Worker Node is the last type of computer used in the cluster, which is only configured to do what it’s told by the Main Node. 
+          </p>
+          <p>
+              Building the cluster</br>
+              We started by disassembling the computers we got and mounting them on a wire rod. We also received some Dell computers, which we didn’t touch, because they were easy to stack and the necessary hardware was already present. The only upgrade they’ve got is their memory (RAM). The ones with the best technical specifications were held apart to become Main or Service Node. The only problem we expected was the power consumption of our cluster: a normal pc uses a few hundred watts; we had multiple running, so we couldn’t use a normal power outlet. But the computers we use only consume about 100W, so we didn’t have a problem. Cooling the set also isn’t a problem, because they’re mounted in a 19” rack, which contains enough fans to cool every piece of hardware inside.
+          </p>
+          <p>
+              Installing Beowulf</br>
+              After we finished the hardware, we started with the actual installation of the software onto the cluster. This has taken several weeks, because it’s very complex. All the computers have to communicate with each other and all execute one command at the same time. Afterwards, we made an image so anybody else could easily make his or her own cluster, just by installing it from our disc.
+          </p>
+          <p>
+              <i class="fa fa-trophy" aria-hidden="true"></i> With this project we've won several prices:
+                <ul>
+                  <li>A trip to Moscow to present our project on a international Science Expo</li>
+                  <li>Public price (4 Texas Instruments nSpire calculators)</li>
+                </ul>
           </p>
         </div>   
       </div>

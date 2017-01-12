@@ -1,20 +1,38 @@
 <div class="single-portfolio">
   <div class="container">
     <div class="row">
-      <div class="col-md-8" id="primary">
-       <img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" />
+      <div class="col-md-4" id="primary">
+      <table>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+      </table>
      </div>
-     <div class="col-md-4" id="secondary">
+     <div class="col-md-8" id="secondary">
       <div class="project-desc">
-        <h3>Project Details</h3>
+        <h3>Quadcopter FPGA</h3>
         <div class="line-strong"></div>
         <ul class="list-details">
-          <li><i class="fa fa-calendar"></i> 9 Januari 2017</li>
-          <li><i class="fa fa-tag"></i> coding, contest, other</li>
-          <li><i class="fa fa-globe"></i><a href="#">Live Demo</a></li>
+          <li><i class="fa fa-calendar"></i>2015</li>
+          <li><i class="fa fa-tag"></i>coding</li>
+          <li><i class="fa fa-user"></i>Gert-Jan Andries, Xavier Dejager and Nick Steen</li>
         </ul>
+          <h3>Project overview</h3>
+
           <p>
-              Lorem ipsum dolor sit amet consectetuer malesuada congue et suscipit condimentum. Nulla at malesuada mauris ornare neque tellus ac Aenean adipiscing felis. Vestibulum turpis Nam pede eget elit feugiat Vestibulum neque Curabitur justo. Donec cursus semper urna consectetuer Nam Vivamus ut Pellentesque mauris laoreet. Vitae magna in at Nulla sodales vitae wisi tincidunt libero laoreet.
+            In this project, a quad copter flight controller was designed in 'pure' hardware making use of a FPGA (Mojo development board). A PID control unit was used in order to provide stabilization around the three axes of movement of the quad copter. Due to the limited resources that are available on the FPGA (Spartan 6 SLX9), different approaches are used to fit the PID controllers into the FPGA. It was investigated whether there can be made use of the high-speed DSP48 slices available in the Spartan 6 or the Xilinx IP Core multiplier. In order to achieve a minimal resource design, the different channels of the FPGA were multiplexed.
+          </p>
+
+          <p>
+            In addition to the design of a PID controller, various other system components were designed as well.
+          </p>
+          <ul>
+              <li>A PWM generator to control the BLDC engines.</li>
+              <li>A mixing unit, to generate the correct control signal for each engine.</li>
+              <li>An SPI slave interface to communicate with different sensors and make it possible to access the quadcopter's register.</li>
+              <li>A PWM reader in order to read the incomming signal from te remote control.</li>
+          </ul>
+          <p>
+            All hardware was simulated and then tested on an FPGA. Using Matlab and Simulink the necessary calculations and simulations are made before the VHDL implementation was done. In addition to the hardware, the quadcopterframe is fully designed as well. This frame is designed in such a way that it consists of several parts which can be manufactured by a 3D printer.
           </p>
         </div>   
       </div>

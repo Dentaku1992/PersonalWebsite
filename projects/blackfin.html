@@ -2,19 +2,35 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4" id="primary">
-       <img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" />
+      <table>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+      </table>
      </div>
      <div class="col-md-8" id="secondary">
       <div class="project-desc">
-        <h3>Project Details</h3>
+        <h3>Digital Signal Processing on a BlackFin DSP</h3>
         <div class="line-strong"></div>
         <ul class="list-details">
-          <li><i class="fa fa-calendar"></i> 9 Januari 2017</li>
-          <li><i class="fa fa-tag"></i> coding, contest, other</li>
-          <li><i class="fa fa-globe"></i><a href="#">Live Demo</a></li>
+          <li><i class="fa fa-calendar"></i>2015</li>
+          <li><i class="fa fa-tag"></i>coding</li>
+          <li><i class="fa fa-user"></i>Gert-Jan Andries, Xavier Dejager and Nick Steen</li>
         </ul>
+          <h3>Project overview</h3>
           <p>
-              Lorem ipsum dolor sit amet consectetuer malesuada congue et suscipit condimentum. Nulla at malesuada mauris ornare neque tellus ac Aenean adipiscing felis. Vestibulum turpis Nam pede eget elit feugiat Vestibulum neque Curabitur justo. Donec cursus semper urna consectetuer Nam Vivamus ut Pellentesque mauris laoreet. Vitae magna in at Nulla sodales vitae wisi tincidunt libero laoreet.
+            In this project a BlackFin Development kit is used to manipulate realtime video content. In this project the BlackFin BF-561 DSP processor is used.
+          </p>
+          <h3>Project goals</h3>
+          <p>
+            The goal of this project is to apply a color conversion on a real-time video signal using the Blackfin BF-561 DSP processor. This video signal is coming from a digital camera, and sent to the BlackFin via the NTSC protocol. The color change that must be made is a transformation of blue (color of a Smurfs) to yellow.
+          </p>
+
+          <p>
+            First, several DSP algorithms were implemented in Matlab in order to test, evaluate and simulate them. After the Matlab simulation the algorithm is implemented on the DSP processor using the programming language C ++.
+          </p>
+
+          <p>
+            In addition to the practical implementation, a small study of color spaces and -conversions, as well as a theoretical study of techniques which can increase the performance and the quality of the final result by using the same hardware, was made.
           </p>
         </div>   
       </div>

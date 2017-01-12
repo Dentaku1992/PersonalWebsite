@@ -1,21 +1,52 @@
 <div class="single-portfolio">
   <div class="container">
     <div class="row">
-      <div class="col-md-8" id="primary">
-       <img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" />
+      <div class="col-md-4" id="primary">
+      <table>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+        <tr><td><img alt="project1" src="images/portfolio/thumb.jpg" class="img-responsive" /></td></tr>
+      </table>
      </div>
-     <div class="col-md-4" id="secondary">
+     <div class="col-md-8" id="secondary">
       <div class="project-desc">
-        <h3>Project Details</h3>
+        <h3>Spectrum Analyzer in VHDL</h3>
         <div class="line-strong"></div>
         <ul class="list-details">
-          <li><i class="fa fa-calendar"></i> 9 Januari 2017</li>
-          <li><i class="fa fa-tag"></i> coding, contest, other</li>
-          <li><i class="fa fa-globe"></i><a href="#">Live Demo</a></li>
+          <li><i class="fa fa-calendar"></i>2014</li>
+          <li><i class="fa fa-tag"></i>coding</li>
+          <li><i class="fa fa-user"></i>Gert-Jan Andries, Xavier Dejager and Nick Steen</li>
         </ul>
+          <h3>Intro</h3>
           <p>
-              Lorem ipsum dolor sit amet consectetuer malesuada congue et suscipit condimentum. Nulla at malesuada mauris ornare neque tellus ac Aenean adipiscing felis. Vestibulum turpis Nam pede eget elit feugiat Vestibulum neque Curabitur justo. Donec cursus semper urna consectetuer Nam Vivamus ut Pellentesque mauris laoreet. Vitae magna in at Nulla sodales vitae wisi tincidunt libero laoreet.
+            This project contains an audio spectrum analyzer written in VHDL and synthesizable for a Xilinx Zynq 7000. The development board used to build this project is a ZedBoard.
           </p>
+          <p>
+            The audio spectrum analyzer takes a stereo audio as input than calculates the spectrum trough a fast Fourrier transform (FFT). This spectrum is than shown on a HDMI or VGA compatible screen.
+          </p>
+          <p>
+            The user has the possibility to make some preferences (different themes, averaging...) by using the buttons on te ZedBoard.
+          </p>
+
+          <h3>General workflow</h3>
+            <ol>
+              <li>An audio signal is applied to the line input of the ZedBoard</li>
+
+              <li>The audio signal is sampled trough an audio codec (ADAU1761)</li>
+
+              <li>The audio signal is decoded by an I2S decoder</li>
+
+              <li>A RAM memory is filled with 1024 audio samples. Each sample consists out of 16-bit audio data per channel.</li>
+
+              <li>When the audio sample memory is completely filled, the samples will d multiplied with a hamming window. This is done separately for each channel.</li>
+
+              <li>The audio samples are then supplied to the FFT engine. This engine reads 1024 samples in before the transformation begins.</li>
+
+              <li>When the transformation is finished, the samples are stored in a (block) RAM. The 512 samples are scaled to a width of 1280 pixels to fit on a HD screen.</li>
+
+              <li>Finally, the Image generation logic will generate an image depending on the switches. This picture is than send to the HDMI and VGA interface of the ZedBoard.</li>
+
+              <li>On the ZedBoard OLED screen some aditional data about the user settings is shown. This project contains also a driver for the ZedBoard OLED screen completely writting in VHDL.</li>
+            </ol>
         </div>   
       </div>
     </div>
