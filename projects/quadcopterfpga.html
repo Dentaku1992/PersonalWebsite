@@ -17,7 +17,7 @@
           <li><i class="fa fa-github"></i><a href="https://github.com/Dentaku1992/QuadcopterFPGA">GitHub project page</a></li>
           <li><i class="fa fa-user"></i>Gert-Jan Andries, Xavier Dejager and Nick Steen</li>
         </ul>
-          <h3>Project overview</h3>
+          <h3>The project</h3>
 
           <p>
             In this project, a quad copter flight controller was designed in 'pure' hardware making use of a FPGA (Mojo development board). A PID control unit was used in order to provide stabilization around the three axes of movement of the quad copter. Due to the limited resources that are available on the FPGA (Spartan 6 SLX9), different approaches are used to fit the PID controllers into the FPGA. It was investigated whether there can be made use of the high-speed DSP48 slices available in the Spartan 6 or the Xilinx IP Core multiplier. In order to achieve a minimal resource design, the different channels of the FPGA were multiplexed.
@@ -30,7 +30,7 @@
               <li>A PWM generator to control the BLDC engines.</li>
               <li>A mixing unit, to generate the correct control signal for each engine.</li>
               <li>An SPI slave interface to communicate with different sensors and make it possible to access the quadcopter's register.</li>
-              <li>A PWM reader in order to read the incomming signal from te remote control.</li>
+              <li>A PWM reader in order to read the incoming signal from te remote control.</li>
           </ul>
           <p>
             All hardware was simulated and then tested on an FPGA. Using Matlab and Simulink the necessary calculations and simulations are made before the VHDL implementation was done. In addition to the hardware, the quadcopterframe is fully designed as well. This frame is designed in such a way that it consists of several parts which can be manufactured by a 3D printer.
