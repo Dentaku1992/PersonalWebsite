@@ -757,10 +757,10 @@ transform: rotate(180deg);
     display: inline-block;
     line-height: 150px;
     z-index: 2;
-    font-size:1.6em;
+    font-size:1.3em;
 }
 .percent:after {
-    content: "%";
+    /*content: "%";*/
     font-size: 0.8em;
     margin-left: 0.1em;
 }

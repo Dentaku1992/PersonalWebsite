@@ -193,9 +193,9 @@ $(document).ready(function () {
                 size: "150",
                 lineWidth: 15,
                 animate: 2e3,
-                onStep: function (e, t, n) {
+                /*onStep: function (e, t, n) {
                     $(this.el).find(".percent").text(Math.round(n))
-                }
+                }*/
             })
         })
     });
